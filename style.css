@@ -1,0 +1,149 @@
+/* Navigation */
+.navbar {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-logo {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+}
+
+/* Hero */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-logo {
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+/* Service Cards - HUGE Hover Effect */
+.service-card {
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    border: none;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-25px) scale(1.05);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.25);
+}
+
+.card-icon i {
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .card-icon i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.hover-content-large {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%);
+    transform: translateY(100%);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 10;
+    border-top: 4px solid;
+}
+
+.service-card:hover .hover-content-large {
+    bottom: 0;
+    transform: translateY(0);
+}
+
+.service-card:nth-child(1):hover .hover-content-large {
+    border-color: #007bff;
+}
+
+.service-card:nth-child(2):hover .hover-content-large {
+    border-color: #28a745;
+}
+
+.service-card:nth-child(3):hover .hover-content-large {
+    border-color: #dc3545;
+}
+
+/* Background Gradient */
+.bg-gradient {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.footer h4, .footer h5 {
+    color: #ffd700;
+}
+
+.footer a {
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #007bff !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-brand-text {
+        font-size: 1.2rem;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-15px) scale(1.02);
+    }
+    
+    .hover-content-large {
+        position: relative !important;
+        bottom: 0 !important;
+        transform: none !important;
+        border-top: 3px solid;
+        min-height: 200px;
+    }
+}
+
+
+
